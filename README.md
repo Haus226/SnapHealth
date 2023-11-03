@@ -1,6 +1,6 @@
-# untitled1
+# SnapHealth
 
-A new Flutter project.
+An Android phone application that predict the medical images provided by the user for health screening.
 
 ## Getting Started
 
