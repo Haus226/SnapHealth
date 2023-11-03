@@ -11,45 +11,30 @@
 - [`train.ipynb`](train_and_predict/train.ipynb) is the python files that contains the code written for training where the dataset is organized such that each class folder in the dataset contains test, train and val folders
 
 ## Diseases supported
+The diseases in the same line use the same models to predict they are just different classes
 - Brain
   - Alzheimer
-  - Glioma
-  - Meningioma
-  - Pituitary
+  - Glioma, Meningioma, Pituitary
 - Lung
-  - Lung Adenocarcinoma
-  - Covid-19
-  - Lung Benign Tissue,
-  - Lung Squamous Cell Carcinoma,
-  - Pneumonia,
-  - Tuberculosis,
+  - Lung Adenocarcinoma, Lung Benign Tissue, Lung Squamous Cell Carcinoma
+  - Covid-19, Pneumonia, Tuberculosis
 - Eye
-  - Cataract
-  - Choroidal Neovascularization
-  - Glaucoma
-  - Diabetic Macular Edema
-  - Diabetic Retinopathy
-  - Drusen
+  - Cataract, Glaucoma, Diabetic Retinopathy
+  - Choroidal Neovascularization, Diabetic Macular Edema, Drusen
 - Oral
   - Oral Squamous Cell Carcinoma
 - Lymphoma
-  - Chronic Lymphocytic Leukemia
-  - Follicular Lymphoma
-  - Mantle Cell Lymphoma
+  - Chronic Lymphocytic Leukemia, Follicular Lymphoma, Mantle Cell Lymphoma
 - Colon
-  - Colon Adenocarcinoma
-  - Colon Benign Tissue
+  - Colon Adenocarcinoma, Colon Benign Tissue
 - Kidney
-  - Kidney Cyst
-  - Kidney Stone
-  - Kidney Tumor
+  - Kidney Cyst, Kidney Stone, Kidney Tumor
 - Cervix
-  - Cervix Cancer
+  - Cervix Cancer (5 different classes for tissue)
 - Breast
-  - Breast Benign
-  - Breast Malignant
+  - Breast Benign, Breast Malignant
 - Leukemia
-  - Acute Lymphocytic Leukemia
+  - Acute Lymphocytic Leukemia (4 different claases for tissue)
 ## CNN Models provided
 - VGG-19
 - InceptionV3
