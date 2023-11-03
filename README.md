@@ -1,16 +1,54 @@
 # SnapHealth
 
-An Android phone application that predict the medical images provided by the user for health screening.
+- An Android mobile application that offers medical image analysis for health screening.
+- Integrate Firebase for secure user data storage
+- Utilize Python as a backend language to enable model predictions on a cloud server if deployed.
+- Present users with detailed information on medical conditions, including descriptions, symptoms, and available treatments.
+- Offer a user-friendly interface for easy navigation and accessibility.
 
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Diseases supported
+- Brain
+  - Alzheimer
+  - Glioma
+  - Meningioma
+  - Pituitary
+- Lung
+  - Lung Adenocarcinoma
+  - Covid-19
+  - Lung Benign Tissue,
+  - Lung Squamous Cell Carcinoma,
+  - Pneumonia,
+  - Tuberculosis,
+- Eye
+  - Cataract
+  - Choroidal Neovascularization
+  - Glaucoma
+  - Diabetic Macular Edema
+  - Diabetic Retinopathy
+  - Drusen
+- Oral
+  - Oral Squamous Cell Carcinoma
+- Lymphoma
+  - Chronic Lymphocytic Leukemia
+  - Follicular Lymphoma
+  - Mantle Cell Lymphoma
+- Colon
+  - Colon Adenocarcinoma
+  - Colon Benign Tissue
+- Kidney
+  - Kidney Cyst
+  - Kidney Stone
+  - Kidney Tumor
+- Cervix
+  - Cervix Cancer
+- Breast
+  - Breast Benign
+  - Breast Malignant
+- Leukemia
+  - Acute Lymphocytic Leukemia
+## CNN Models provided
+- VGG-19
+- InceptionV3
+- Xception
+- DenseNet201
+- Ensemble model of the models above
