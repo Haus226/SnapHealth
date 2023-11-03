@@ -1,0 +1,8 @@
+Induction therapy (First Phase) : Kill most of the leukemia cells in the blood and bone marrow and to restore normal blood cell production.
+Consolidation therapy (Second Phase) : Aimed at destroying any remaining leukemia in the body.
+Maintenance therapy (Third Phase) : Prevent leukemia cells from regrowing.
+Radiation therapy : Radiation uses beams of powerful energy to kill tumor cells
+Chemotherapy : Chemotherapy uses drugs to kill tumor cells
+Targeted therapy : Kill cancer cell by blocking specific chemicals within
+Bone marrow transplant
+Engineering immune cells to fight leukemia :  A specialized treatment called chimeric antigen receptor (CAR)-T cell therapy takes your body's germ-fighting T cells, engineers them to fight cancer and infuses them back into your body.

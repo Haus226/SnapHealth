@@ -1,0 +1,6 @@
+Surgery to remove the tumor.
+Surgery to remove cancer that has spread to the neck.
+Surgery to reconstruct the mouth. 
+Radiation therapy : Radiation uses beams of powerful energy to kill tumor cells
+Chemotherapy : Chemotherapy uses drugs to kill tumor cells
+Targeted therapy : Kill cancer cell by blocking specific chemicals within

@@ -1,0 +1,6 @@
+Watchful waiting : Healthcare providers monitor your overall health and watch for symptoms before starting treatment.
+Chemotherapy : This treatment uses drugs to destroy cancer. It’s a common initial treatment for mantle cell lymphoma.
+Monoclonal antibody therapy : This targeted therapy uses lab-created antibodies to find and kill specific cancer cells.
+Immunotherapy : This treatment fights cancer by boosting your immune system. CAR T-cell therapy is an example of immunotherapy for mantle cell lymphoma.
+Maintenance therapy : If initial treatment puts mantle cell lymphoma into remission, healthcare providers typically use monoclonal antibody therapy as ongoing therapy to keep the disease from coming back.
+Autologous stem cell transplantation : Healthcare providers may recommend this treatment for people able to go through intensive chemotherapy before stem cell transplantation. This treatment doesn’t cure mantle cell lymphoma.

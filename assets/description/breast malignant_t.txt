@@ -1,0 +1,11 @@
+Removing the breast cancer (lumpectomy).
+Removing the entire breast (mastectomy).
+Removing a limited number of lymph nodes (sentinel node biopsy).
+Removing several lymph nodes (axillary lymph node dissection).
+Removing both breasts.
+Radiation therapy : Radiation uses beams of powerful energy to kill tumor cells
+Chemotherapy : Chemotherapy uses drugs to kill tumor cells
+Targeted therapy : Kill cancer cell by blocking specific chemicals within
+Medications that block hormones from attaching to cancer cells (selective estrogen receptor modulators)
+Medications that stop the body from making estrogen after menopause (aromatase inhibitors)
+Surgery or medications to stop hormone production in the ovaries

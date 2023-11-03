@@ -1,0 +1,16 @@
+Fever.
+Cough.
+Tiredness.
+Loss of taste or smell.
+Shortness of breath or difficulty breathing.
+Muscle aches.
+Chills.
+Sore throat.
+Runny nose.
+Headache.
+Chest pain.
+Pink eye (conjunctivitis).
+Nausea.
+Vomiting.
+Diarrhea.
+Rash.

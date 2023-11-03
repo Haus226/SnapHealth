@@ -1,0 +1,6 @@
+Surgery
+Radiation therapy : Radiation uses beams of powerful energy to kill tumor cells
+Chemotherapy : Chemotherapy uses drugs to kill tumor cells
+Targeted therapy : Kill cancer cell by blocking specific chemicals within
+Angiogenesis inhibitors : Stop or slow the growth or spread of tumors by stopping them from making new blood vessels
+Immunotherapy : Increase the natural ability of the patient's immune system to fight cancer.

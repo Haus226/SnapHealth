@@ -1,0 +1,366 @@
+name: SnapHealth
+description: App that help to predict the medical image provided by the user.
+# The following line prevents the package from being accidentally published to
+# pub.dev using `flutter pub publish`. This is preferred for private packages.
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+
+# The following defines the version and build number for your application.
+# A version number is three numbers separated by dots, like 1.2.43
+# followed by an optional build number separated by a +.
+# Both the version and the builder number may be overridden in flutter
+# build by specifying --build-name and --build-number, respectively.
+# In Android, build-name is used as versionName while build-number used as versionCode.
+# Read more about Android versioning at https://developer.android.com/studio/publish/versioning
+# In iOS, build-name is used as CFBundleShortVersionString while build-number is used as CFBundleVersion.
+# Read more about iOS versioning at
+# https://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Articles/CoreFoundationKeys.html
+# In Windows, build-name is used as the major, minor, and patch parts
+# of the product and file versions while build-number is used as the build suffix.
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.1.3 <4.0.0'
+
+# Dependencies specify other packages that your package needs in order to work.
+# To automatically upgrade your package dependencies to the latest versions
+# consider running `flutter pub upgrade --major-versions`. Alternatively,
+# dependencies can be manually updated by changing the version numbers below to
+# the latest version available on pub.dev. To see which dependencies have newer
+# versions available, run `flutter pub outdated`.
+dependencies:
+  flutter:
+    sdk: flutter
+
+
+  # The following adds the Cupertino Icons font to your application.
+  # Use with the CupertinoIcons class for iOS style icons.
+  cupertino_icons: ^1.0.2
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  # The "flutter_lints" package below contains a set of recommended lints to
+  # encourage good coding practices. The lint set provided by the package is
+  # activated in the `analysis_options.yaml` file located at the root of your
+  # package. See that file for information about deactivating specific lint
+  # rules and activating additional ones.
+  flutter_lints: ^2.0.0
+  http: ^1.0.0
+  image_picker: ^0.8.2
+  easy_image_viewer: ^1.2.1
+  flutter_launcher_icons: "^0.13.1"
+  google_fonts: ^6.1.0
+  multiselect: ^0.1.0
+  hexcolor: ^3.0.1
+
+  firebase_storage: ^11.4.0
+  firebase_auth: ^4.12.0
+  firebase_core: ^2.20.0
+  google_sign_in: ^6.1.5 
+  cloud_firestore: ^4.12.1
+  email_auth: ^1.1.1
+
+flutter_launcher_icons:
+  android: false
+  ios: true
+  image_path: "assets/SnapHealth.png"
+
+# For information on the generic Dart part of this file, see the
+# following page: https://dart.dev/tools/pub/pubspec
+
+# The following section is specific to Flutter packages.
+flutter:
+
+  # The following line ensures that the Material Icons font is
+  # included with your application, so that you can use the icons in
+  # the material Icons class.
+  uses-material-design: true
+
+  # To add assets to your application, add an assets section, like this:
+  assets:
+    - assets/accuracy.txt
+
+    - assets/description/alzheimer_d.txt
+    - assets/description/alzheimer_s.txt
+    - assets/description/alzheimer_t.txt
+
+    - assets/description/glioma_d.txt
+    - assets/description/glioma_s.txt
+    - assets/description/glioma_t.txt
+
+    - assets/description/meningioma_d.txt
+    - assets/description/meningioma_s.txt
+    - assets/description/meningioma_t.txt
+
+    - assets/description/pituitary_d.txt
+    - assets/description/pituitary_s.txt
+    - assets/description/pituitary_t.txt
+
+    - assets/description/lung adenocarcinoma_d.txt
+    - assets/description/lung adenocarcinoma_s.txt
+    - assets/description/lung adenocarcinoma_t.txt
+
+    - assets/description/covid-19_d.txt
+    - assets/description/covid-19_s.txt
+    - assets/description/covid-19_t.txt
+
+    - assets/description/lung benign tissue_d.txt
+    - assets/description/lung benign tissue_s.txt
+    - assets/description/lung benign tissue_t.txt
+
+    - assets/description/lung squamous cell carcinoma_d.txt
+    - assets/description/lung squamous cell carcinoma_s.txt
+    - assets/description/lung squamous cell carcinoma_t.txt
+
+    - assets/description/pneumonia_d.txt
+    - assets/description/pneumonia_s.txt
+    - assets/description/pneumonia_t.txt
+
+    - assets/description/tuberculosis_d.txt
+    - assets/description/tuberculosis_s.txt
+    - assets/description/tuberculosis_t.txt
+
+    - assets/description/cataract_d.txt
+    - assets/description/cataract_s.txt
+    - assets/description/cataract_t.txt
+
+    - assets/description/choroidal neovascularization_d.txt
+    - assets/description/choroidal neovascularization_s.txt
+    - assets/description/choroidal neovascularization_t.txt
+
+    - assets/description/glaucoma_d.txt
+    - assets/description/glaucoma_s.txt
+    - assets/description/glaucoma_t.txt
+
+    - assets/description/diabetic macular edema_d.txt
+    - assets/description/diabetic macular edema_s.txt
+    - assets/description/diabetic macular edema_t.txt
+
+    - assets/description/diabetic retinopathy_d.txt
+    - assets/description/diabetic retinopathy_s.txt
+    - assets/description/diabetic retinopathy_t.txt
+
+    - assets/description/drusen_d.txt
+    - assets/description/drusen_s.txt
+    - assets/description/drusen_t.txt
+
+    - assets/description/oral squamous cell carcinoma_d.txt
+    - assets/description/oral squamous cell carcinoma_s.txt
+    - assets/description/oral squamous cell carcinoma_t.txt
+
+    - assets/description/chronic lymphocytic leukemia_d.txt
+    - assets/description/chronic lymphocytic leukemia_s.txt
+    - assets/description/chronic lymphocytic leukemia_t.txt
+
+    - assets/description/follicular lymphoma_d.txt
+    - assets/description/follicular lymphoma_s.txt
+    - assets/description/follicular lymphoma_t.txt
+
+    - assets/description/mantle cell lymphoma_d.txt
+    - assets/description/mantle cell lymphoma_s.txt
+    - assets/description/mantle cell lymphoma_t.txt
+
+    - assets/description/colon adenocarcinoma_d.txt
+    - assets/description/colon adenocarcinoma_s.txt
+    - assets/description/colon adenocarcinoma_t.txt
+
+    - assets/description/colon benign tissue_d.txt
+    - assets/description/colon benign tissue_s.txt
+    - assets/description/colon benign tissue_t.txt
+
+    - assets/description/kidney tumor_d.txt
+    - assets/description/kidney tumor_s.txt
+    - assets/description/kidney tumor_t.txt
+
+    - assets/description/kidney cyst_d.txt
+    - assets/description/kidney cyst_s.txt
+    - assets/description/kidney cyst_t.txt
+
+    - assets/description/kidney stone_d.txt
+    - assets/description/kidney stone_s.txt
+    - assets/description/kidney stone_t.txt
+
+    - assets/description/cervix cancer_d.txt
+    - assets/description/cervix cancer_s.txt
+    - assets/description/cervix cancer_t.txt
+
+    - assets/description/breast benign_d.txt
+    - assets/description/breast benign_s.txt
+    - assets/description/breast benign_t.txt
+
+    - assets/description/breast malignant_d.txt
+    - assets/description/breast malignant_s.txt
+    - assets/description/breast malignant_t.txt
+
+    - assets/description/acute lymphocytic leukemia_d.txt
+    - assets/description/acute lymphocytic leukemia_s.txt
+    - assets/description/acute lymphocytic leukemia_t.txt
+
+    - assets/alzheimer/non demented/non demented (1).jpg
+    - assets/alzheimer/non demented/non demented (2).jpg
+    - assets/alzheimer/non demented/non demented (3).jpg
+
+    - assets/alzheimer/very mild demented/very mild demented (1).jpg
+    - assets/alzheimer/very mild demented/very mild demented (2).jpg
+    - assets/alzheimer/very mild demented/very mild demented (3).jpg
+    - assets/alzheimer/moderate demented/moderate demented (1).jpg
+    - assets/alzheimer/moderate demented/moderate demented (2).jpg
+    - assets/alzheimer/moderate demented/moderate demented (3).jpg
+    - assets/alzheimer/mild demented/mild demented (1).jpg
+    - assets/alzheimer/mild demented/mild demented (2).jpg
+    - assets/alzheimer/mild demented/mild demented (3).jpg
+
+
+
+    - assets/glioma/glioma (1).jpg
+    - assets/glioma/glioma (2).jpg
+    - assets/glioma/glioma (3).jpg
+    - assets/meningioma/meningioma (1).jpg
+    - assets/meningioma/meningioma (2).jpg
+    - assets/meningioma/meningioma (3).jpg
+    - assets/pituitary/pituitary (1).jpg
+    - assets/pituitary/pituitary (2).jpg
+    - assets/pituitary/pituitary (3).jpg
+    - assets/lung adenocarcinoma/lung adenocarcinoma (1).jpg
+    - assets/lung adenocarcinoma/lung adenocarcinoma (2).jpg
+    - assets/lung adenocarcinoma/lung adenocarcinoma (3).jpg
+    - assets/covid-19/covid-19 (1).jpg
+    - assets/covid-19/covid-19 (2).jpg
+    - assets/covid-19/covid-19 (3).jpg
+    - assets/lung benign tissue/lung benign tissue (1).jpg
+    - assets/lung benign tissue/lung benign tissue (2).jpg
+    - assets/lung benign tissue/lung benign tissue (3).jpg
+    - assets/lung squamous cell carcinoma/lung squamous cell carcinoma (1).jpg  
+    - assets/lung squamous cell carcinoma/lung squamous cell carcinoma (2).jpg  
+    - assets/lung squamous cell carcinoma/lung squamous cell carcinoma (3).jpg  
+    - assets/pneumonia/bacterial/bacterial (1).jpg
+    - assets/pneumonia/bacterial/bacterial (2).jpg
+    - assets/pneumonia/bacterial/bacterial (3).jpg
+    - assets/pneumonia/viral/viral (1).jpg
+    - assets/pneumonia/viral/viral (2).jpg
+    - assets/pneumonia/viral/viral (3).jpg
+    - assets/tuberculosis/tuberculosis (1).jpg
+    - assets/tuberculosis/tuberculosis (2).jpg
+    - assets/tuberculosis/tuberculosis (3).jpg
+    - assets/cataract/cataract (1).jpg
+    - assets/cataract/cataract (2).jpg
+    - assets/cataract/cataract (3).jpg
+    - assets/choroidal neovascularization/choroidal neovascularization (1).jpg  
+    - assets/choroidal neovascularization/choroidal neovascularization (2).jpg  
+    - assets/choroidal neovascularization/choroidal neovascularization (3).jpg  
+    - assets/glaucoma/glaucoma (1).jpg
+    - assets/glaucoma/glaucoma (2).jpg
+    - assets/glaucoma/glaucoma (3).jpg
+    - assets/diabetic macular edema/diabetic macular edema (1).jpg
+    - assets/diabetic macular edema/diabetic macular edema (2).jpg
+    - assets/diabetic macular edema/diabetic macular edema (3).jpg
+    - assets/diabetic retinopathy/diabetic retinopathy (1).jpg
+    - assets/diabetic retinopathy/diabetic retinopathy (2).jpg
+    - assets/diabetic retinopathy/diabetic retinopathy (3).jpg
+    - assets/drusen/drusen (1).jpg
+    - assets/drusen/drusen (2).jpg
+    - assets/drusen/drusen (3).jpg
+    - assets/oral squamous cell carcinoma/oral squamous cell carcinoma (1).jpg  
+    - assets/oral squamous cell carcinoma/oral squamous cell carcinoma (2).jpg  
+    - assets/oral squamous cell carcinoma/oral squamous cell carcinoma (3).jpg  
+    - assets/chronic lymphocytic leukemia/chronic lymphocytic leukemia (1).jpg  
+    - assets/chronic lymphocytic leukemia/chronic lymphocytic leukemia (2).jpg  
+    - assets/chronic lymphocytic leukemia/chronic lymphocytic leukemia (3).jpg  
+    - assets/follicular lymphoma/follicular lymphoma (1).jpg
+    - assets/follicular lymphoma/follicular lymphoma (2).jpg
+    - assets/follicular lymphoma/follicular lymphoma (3).jpg
+    - assets/mantle cell lymphoma/mantle cell lymphoma (1).jpg
+    - assets/mantle cell lymphoma/mantle cell lymphoma (2).jpg
+    - assets/mantle cell lymphoma/mantle cell lymphoma (3).jpg
+    - assets/colon adenocarcinoma/colon adenocarcinoma (1).jpg
+    - assets/colon adenocarcinoma/colon adenocarcinoma (2).jpg
+    - assets/colon adenocarcinoma/colon adenocarcinoma (3).jpg
+    - assets/colon benign tissue/colon benign tissue (1).jpg
+    - assets/colon benign tissue/colon benign tissue (2).jpg
+    - assets/colon benign tissue/colon benign tissue (3).jpg
+    - assets/kidney tumor/kidney tumor (1).jpg
+    - assets/kidney tumor/kidney tumor (2).jpg
+    - assets/kidney tumor/kidney tumor (3).jpg
+    - assets/kidney cyst/kidney cyst (1).jpg
+    - assets/kidney cyst/kidney cyst (2).jpg
+    - assets/kidney cyst/kidney cyst (3).jpg
+    - assets/kidney stone/kidney stone (1).jpg
+    - assets/kidney stone/kidney stone (2).jpg
+    - assets/kidney stone/kidney stone (3).jpg
+    - assets/cervix cancer/dyskeratotic/dyskeratotic (1).jpg
+    - assets/cervix cancer/dyskeratotic/dyskeratotic (2).jpg
+    - assets/cervix cancer/dyskeratotic/dyskeratotic (3).jpg
+    - assets/cervix cancer/koilocytotic/koilocytotic (1).jpg
+    - assets/cervix cancer/koilocytotic/koilocytotic (2).jpg
+    - assets/cervix cancer/koilocytotic/koilocytotic (3).jpg
+    - assets/cervix cancer/metaplastic/metaplastic (1).jpg
+    - assets/cervix cancer/metaplastic/metaplastic (2).jpg
+    - assets/cervix cancer/metaplastic/metaplastic (3).jpg
+    - assets/cervix cancer/parabasal/parabasal (1).jpg
+    - assets/cervix cancer/parabasal/parabasal (2).jpg
+    - assets/cervix cancer/parabasal/parabasal (3).jpg
+    - assets/cervix cancer/superficial-intermediate/superficial-intermediate (1).jpg
+    - assets/cervix cancer/superficial-intermediate/superficial-intermediate (2).jpg
+    - assets/cervix cancer/superficial-intermediate/superficial-intermediate (3).jpg
+    - assets/breast benign/breast benign (1).jpg
+    - assets/breast benign/breast benign (2).jpg
+    - assets/breast benign/breast benign (3).jpg
+    - assets/breast malignant/breast malignant (1).jpg
+    - assets/breast malignant/breast malignant (2).jpg
+    - assets/breast malignant/breast malignant (3).jpg
+    - assets/acute lymphocytic leukemia/benign/benign (1).jpg
+    - assets/acute lymphocytic leukemia/benign/benign (2).jpg
+    - assets/acute lymphocytic leukemia/benign/benign (3).jpg
+    - assets/acute lymphocytic leukemia/early pre-b/early pre-b (1).jpg
+    - assets/acute lymphocytic leukemia/early pre-b/early pre-b (2).jpg
+    - assets/acute lymphocytic leukemia/early pre-b/early pre-b (3).jpg
+    - assets/acute lymphocytic leukemia/pre-b/pre-b (1).jpg
+    - assets/acute lymphocytic leukemia/pre-b/pre-b (2).jpg
+    - assets/acute lymphocytic leukemia/pre-b/pre-b (3).jpg
+    - assets/acute lymphocytic leukemia/pro-b/pro-b (1).jpg
+    - assets/acute lymphocytic leukemia/pro-b/pro-b (2).jpg
+    - assets/acute lymphocytic leukemia/pro-b/pro-b (3).jpg
+
+    - assets/brain_bg.jpg
+    - assets/lung_bg.jpg
+    - assets/cervix_bg.jpg
+    - assets/leukemia_bg.jpg
+    - assets/eye_bg.jpg
+    - assets/colon_bg.jpg
+    - assets/lung_bg.jpg
+    - assets/kidney_bg.jpg
+    - assets/oral_bg.jpg
+    - assets/lymphoma_bg.jpg
+    - assets/breast_bg.jpg
+
+    - assets/snake.png
+    - assets/SnapHealth.png
+    - assets/cover.jfif
+    - assets/profile-background.webp
+
+  # An image asset can refer to one or more resolution-specific "variants", see
+  # https://flutter.dev/assets-and-images/#resolution-aware
+
+  # For details regarding adding assets from package dependencies, see
+  # https://flutter.dev/assets-and-images/#from-packages
+
+  # To add custom fonts to your application, add a fonts section here,
+  # in this "flutter" section. Each entry in this list should have a
+  # "family" key with the font family name, and a "fonts" key with a
+  # list giving the asset and other descriptors for the font. For
+  # example:
+  # fonts:
+  #   - family: Schyler
+  #     fonts:
+  #       - asset: fonts/Schyler-Regular.ttf
+  #       - asset: fonts/Schyler-Italic.ttf
+  #         style: italic
+  #   - family: Trajan Pro
+  #     fonts:
+  #       - asset: fonts/TrajanPro.ttf
+  #       - asset: fonts/TrajanPro_Bold.ttf
+  #         weight: 700
+  #
+  # For details regarding fonts from package dependencies,
+  # see https://flutter.dev/custom-fonts/#from-packages

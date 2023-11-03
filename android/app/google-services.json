@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "987530884202",
+    "project_id": "snaphealth-cf755",
+    "storage_bucket": "snaphealth-cf755.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:987530884202:android:11719c2d9369ed3f37c613",
+        "android_client_info": {
+          "package_name": "com.SnapHealth.SnapHealth"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "987530884202-88vm466bi0st13l0j8k34f8prmse81qn.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDMN2nAU-1SCj_GTPgOt6rfnQAAFiPwY2U"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "987530884202-88vm466bi0st13l0j8k34f8prmse81qn.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,6 @@
+Cervical cancer is a growth of cells that starts in the cervix. The cervix is the lower part of the uterus that connects to the vagina.
+Various strains of the human papillomavirus, also called HPV, play a role in causing most cervical cancers. HPV is a common infection that's passed through sexual contact. When exposed to HPV, the body's immune system typically prevents the virus from doing harm. In a small percentage of people, however, the virus survives for years. This contributes to the process that causes some cervical cells to become cancer cells.
+You can reduce your risk of developing cervical cancer by having screening tests and receiving a vaccine that protects against HPV infection.
+Normal Cells : Superficial-Intermediate, Parabasal
+Abnormal Cells : Dyskeratotic, Koilocytotic
+Benign Cells : Metaplastic
