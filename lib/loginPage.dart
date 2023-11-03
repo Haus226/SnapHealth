@@ -8,6 +8,7 @@ import 'dart:async';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'homePage.dart';
 import 'components/utils.dart';
+import 'package:email_validator/email_validator.dart';
 
 
 class LoginPage extends StatefulWidget {
@@ -29,7 +30,6 @@ class _LoginPageState extends State<LoginPage> {
   signUp(BuildContext context) async {
       int counter = 12;
       try {
-
         UserCredential userCredential = await FirebaseAuth.instance
             .createUserWithEmailAndPassword(email: emailController.text, password: passwordController.text);
         
@@ -217,6 +217,14 @@ class _LoginPageState extends State<LoginPage> {
                 const SizedBox(height:20),
                 _isVisible ? MyButton(
                   onPressed: () {
+                    if (emailController.text.isEmpty || passwordController.text.isEmpty || confirmPasswordController.text.isEmpty || nameController.text.isEmpty) {
+                      showMessage(context, "Please fill in all the fields.");
+                      return;
+                    }
+                    if (!EmailValidator.validate(emailController.text)) {
+                      showMessage(context, "Please key in a valid email address");
+                      return;
+                    }
                     if (passwordController.text != confirmPasswordController.text) {
                       showMessage(context, "The passwords are different.");
                       return;

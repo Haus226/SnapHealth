@@ -1,3 +1,4 @@
+import 'package:SnapHealth/profilePage.dart';
 import 'package:flutter/material.dart';
 import 'loginPage.dart';
 import 'package:firebase_auth/firebase_auth.dart';
@@ -123,13 +124,24 @@ class _HomeState extends State<Home> {
                 title: Text(d.name, style: GoogleFonts.lora(fontSize: 20, color: Colors.white),),
                 trailing: const Icon(Icons.arrow_forward_ios_rounded, color: Colors.white,),
                 onTap: () {
+                  // Navigator.push(
+                  //     context,
+                  //     MaterialPageRoute(
+                  //         builder: (context) => DiseasesPage(
+                  //               id: d.id,
+                  //               PageTitle: d.name,
+                  //             )));
                   Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) => DiseasesPage(
-                                id: d.id,
-                                PageTitle: d.name,
-                              )));
+                    context,
+                    PageRouteBuilder(
+                      pageBuilder: (BuildContext context, Animation<double> animation, Animation<double> secondaryAnimation) {
+                        return DiseasesPage(id: d.id, PageTitle: d.name,);
+                      },
+                      transitionsBuilder: (BuildContext context, Animation<double> animation, Animation<double> secondaryAnimation, Widget child) {
+                        return FadeTransition(opacity: animation, child: child);
+                      },
+                    ),
+                  );
                 },
               )
             
@@ -229,6 +241,29 @@ class _HomeState extends State<Home> {
             title: Text('Profile'),
             onTap: () {
               Navigator.pushNamed(context, "/profile");
+
+              //  Animation
+              // Navigator.push(
+              //       context,
+              //       PageRouteBuilder(
+              //         pageBuilder: (BuildContext context, Animation<double> animation, Animation<double> secondaryAnimation) {
+              //           return const ProfilePage();
+              //         },
+              //         transitionsBuilder: (BuildContext context, Animation<double> animation, Animation<double> secondaryAnimation, Widget child) {
+
+              //           const begin = 0.0;
+              //           const end = 1.0;
+              //           const curve = Curves.easeInOut;
+              //           var tween = Tween(begin: begin, end: end).chain(CurveTween(curve: curve));
+
+              //           return ScaleTransition(
+              //           scale: animation.drive(tween),
+              //           child: child,
+              //           );
+                        
+              //         },
+              //       ),
+              //     );
             },
           ),
 
@@ -269,11 +304,7 @@ class _HomeState extends State<Home> {
           //     ),
           // ),
         ),
-        body: AnimatedContainer(
-          duration: Duration(seconds: 2),
-
-          curve: Curves.easeInOut,
-          child:
+        body: 
         SingleChildScrollView(
           child:
           Column(
@@ -281,7 +312,7 @@ class _HomeState extends State<Home> {
                 for (var idx = 0; idx < category.length; idx++)
                   categoryCard(category[idx], disease[idx], idx)
             ]
-          ),),),
+          ),),
         backgroundColor: Colors.blue[100],
                 
 

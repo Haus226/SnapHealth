@@ -12,7 +12,6 @@ void main() async {
     title: '',
     debugShowCheckedModeBanner: false,
     initialRoute: "/login",
-
     routes: {
       '/login': (context) => LoginPage(),
       '/home': (context) => const Home(),

@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'components/bulletList.dart';
@@ -10,6 +12,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'components/utils.dart';
+import 'dart:convert';
 
 
 
@@ -155,6 +158,7 @@ class _DiseasesPageState extends State<DiseasesPage> {
     });
       // Test whether the server is running
       try {
+        // ignore: unused_local_variable
         var test_request = await http.get(Uri.parse(URL), ).timeout(Duration(seconds: 3));
       } catch (e) {
         setState(() {
@@ -188,20 +192,10 @@ class _DiseasesPageState extends State<DiseasesPage> {
         // The speed of prediction depends on hardware of the server
         var streamedResponse = await request.send().timeout(const Duration(seconds: 60));
         var response = await http.Response.fromStream(streamedResponse);
+        Map<String, dynamic> jsonResponse = jsonDecode(response.body);
+        print('Response: $jsonResponse');
 
-        // Extract the prediction results
-        Map<String, String> display = {};
-        var pred = response.body.split("\n");
-        pred.remove("");
-        for (var p = 1; p < pred.length - 2; p++) {
-          pred[p] = pred[p].replaceAll('"', "");
-          pred[p] = pred[p].replaceAll(',', "");
-          pred[p] = pred[p].trim();
-          var temp = pred[p].split(":");
-          display[temp[0]] = temp[1];
-        }
-        // print(display);
-        // pred.forEach(print);
+
         setState(() {
         _isLoading = !_isLoading;
           ScaffoldMessenger.of(context).showSnackBar(SnackBar(
@@ -211,21 +205,24 @@ class _DiseasesPageState extends State<DiseasesPage> {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-                const Text(
+                Text(
                   "Class",
-                  style: TextStyle(fontSize: 20),
+                  style: GoogleFonts.lora(fontSize: 24),
                 ),
-                for (var entry in display.entries)
-                  Text(entry.key, style: const TextStyle(fontSize: 14))
+                for (var entry in jsonResponse.entries)
+                  Text(entry.key, style: GoogleFonts.lora(fontSize: 18),
+)
               ]),
               Column(children: [
-                const Text(
+                Text(
                   "Probability",
-                  style: TextStyle(fontSize: 24),
+                  style: GoogleFonts.lora(fontSize: 24),
+
                 ),
                 Column(children: [
-                  for (var entry in display.entries)
-                    Text(entry.value, style: const TextStyle(fontSize: 14))
+                  for (var entry in jsonResponse.entries)
+                    Text(entry.value, style: GoogleFonts.lora(fontSize: 18),
+                    )
                 ])
               ]),
             ],
@@ -253,8 +250,9 @@ class _DiseasesPageState extends State<DiseasesPage> {
         }
 
       } catch (e) {
+        log(e.toString());
         setState(() {
-        _isLoading = !_isLoading;
+          _isLoading = !_isLoading;
         });
         return ScaffoldMessenger.of(context).showSnackBar(const SnackBar(content: Text("Something wrong with the server, please try again...", style:TextStyle(fontSize: 20)),));
       }

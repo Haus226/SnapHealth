@@ -47,11 +47,10 @@ dev_dependencies:
   # rules and activating additional ones.
   flutter_lints: ^2.0.0
   http: ^1.0.0
-  image_picker: ^0.8.2
+  image_picker: ^1.0.4
   easy_image_viewer: ^1.2.1
   flutter_launcher_icons: "^0.13.1"
   google_fonts: ^6.1.0
-  multiselect: ^0.1.0
   hexcolor: ^3.0.1
 
   firebase_storage: ^11.4.0
@@ -59,7 +58,7 @@ dev_dependencies:
   firebase_core: ^2.20.0
   google_sign_in: ^6.1.5 
   cloud_firestore: ^4.12.1
-  email_auth: ^1.1.1
+  email_validator: ^2.1.16  
 
 flutter_launcher_icons:
   android: false
