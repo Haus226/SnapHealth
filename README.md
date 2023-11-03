@@ -6,6 +6,10 @@
 - Present users with detailed information on medical conditions, including descriptions, symptoms, and available treatments.
 - Offer a user-friendly interface for easy navigation and accessibility.
 
+## Usage of Python
+- [`predict.py`](train_and_predict/predict.py) is the Flask app used to interact with flutter app to receive medical image and return the prediction
+- [`train.ipynb`](train_and_predict/train.ipynb) is the python files that contains the code written for training where the dataset is organized such that each class folder in the dataset contains test, train and val folders
+
 ## Diseases supported
 - Brain
   - Alzheimer
