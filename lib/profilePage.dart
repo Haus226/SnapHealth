@@ -104,10 +104,10 @@ class _ProfilePageState extends State<ProfilePage> {
       });
     
     List<Widget> plan = [
-      Plan(title: "Free", subtitle: ["Limited to 10 images per week", "Watch Ads to increase your credits"], price: 0),
-      Plan(title: "Basic", subtitle: ["Limited to 100 images per week", "No Ads"], price: 1.99),
-      Plan(title: "Caduceus", subtitle: ["Monthly plan", "1000 images per week", "No Ads", ], price: 9.99),
-      Plan(title: "Asclepius", subtitle: ["Annual plan", "25000 images per year", "No Ads"], price: 109.99)
+      Plan(title: "Free", subtitle: ["Limited to 10 images per week", "Watch Ads to increase your credits if reach the limit"], price: 0),
+      Plan(title: "Basic", subtitle: ["Monthly plan", "Limited to 100 images per week", "No Ads", "Watch Ads to increase your credits if reach the limit"], price: 1.99),
+      Plan(title: "Caduceus", subtitle: ["Monthly plan", "1000 images per week", "No Ads", "Watch Ads to increase your credits if reach the limit"], price: 9.99),
+      Plan(title: "Asclepius", subtitle: ["Annual plan", "25000 images per year", "No Ads", "Watch Ads to increase your credits if reach the limit"], price: 109.99)
     ];
     return Scaffold(
       appBar: AppBar(
@@ -143,7 +143,7 @@ class _ProfilePageState extends State<ProfilePage> {
             child: 
               listTile(
                 title: "Current Plan : $_plan",
-                subtitle: ["Available : $availability", "Credits : $credits"]
+                subtitle: ["Available : $availability", "Credits : $credits", "1 credit will be deducted for each prediction if out of availability"]
                 )
           ),
             SizedBox(
