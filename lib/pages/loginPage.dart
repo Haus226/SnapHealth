@@ -2,12 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:hexcolor/hexcolor.dart';
-import 'components/myButton.dart';
-import 'components/myTextField.dart';
+import '../components/myButton.dart';
+import '../components/myTextField.dart';
 import 'dart:async';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'homePage.dart';
-import 'components/utils.dart';
+import '../components/utils.dart';
 import 'package:email_validator/email_validator.dart';
 
 

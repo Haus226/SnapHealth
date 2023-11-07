@@ -1,71 +1,11 @@
-import 'package:SnapHealth/profilePage.dart';
+import 'package:SnapHealth/pages/profilePage.dart';
 import 'package:flutter/material.dart';
 import 'loginPage.dart';
 import 'package:firebase_auth/firebase_auth.dart';
-import 'components/diseases.dart';
+import '../components/utils.dart';
 import 'diseasesPage.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-
-// Done
-List<Disease> brain = [
-  Disease(name: "Alzheimer", id: 0, category: "Brain"),
-  Disease(name: "Glioma", id: 1, category: "Brain"),
-  Disease(name: "Meningioma", id: 2, category: "Brain"),
-  Disease(name: "Pituitary", id: 3, category: "Brain")
-];
-// Done
-List<Disease> lung = [
-  Disease(name: "Lung Adenocarcinoma", id: 4, category: "Lung"),
-  Disease(name: "Covid-19", id: 5, category: "Lung"),
-  Disease(name: "Lung Benign Tissue", id: 6, category: "Lung"),
-  Disease(name: "Lung Squamous Cell Carcinoma", id: 7, category: "Lung"),
-  Disease(name: "Pneumonia", id: 8, category: "Lung"),
-  Disease(name: "Tuberculosis", id: 9, category: "Lung"),
-];
-// Done
-List<Disease> eye = [
-  Disease(name: "Cataract", id: 10, category: "Eye"),
-  Disease(name: "Choroidal Neovascularization", id: 11, category: "Eye"),
-  Disease(name: "Glaucoma", id: 12, category: "Eye"),
-  Disease(name: "Diabetic Macular Edema ", id: 13, category: "Eye"),
-  Disease(name: "Diabetic Retinopathy", id: 14, category: "Eye"),
-  Disease(name: "Drusen", id: 15, category: "Eye"),
-];
-// Done
-List<Disease> oral = [
-  Disease(name: "Oral Squamous Cell Carcinoma", id: 16, category: "Oral")
-];
-// Done
-List<Disease> lymphoma = [
-  Disease(name: "Chronic Lymphocytic Leukemia", id: 17, category: "Lymphoma"),
-  Disease(name: "Follicular Lymphoma", id: 18, category: "Lymphoma"),
-  Disease(name: "Mantle Cell Lymphoma", id: 19, category: "Lymphoma"),
-];
-// Done
-List<Disease> colon = [
-    Disease(name: "Colon Adenocarcinoma", id: 20, category: "Lymphoma"),
-    Disease(name: "Colon Benign Tissue", id: 21, category: "Lymphoma"),
-];
-// Done
-List<Disease> kidney = [
-  Disease(name: "Kidney Cyst", id: 22, category: "Kidney"),
-  Disease(name: "Kidney Stone", id: 23, category: "Kidney"),
-  Disease(name: "Kidney Tumor", id: 24, category: "Kidney"),
-];
-// Done
-List<Disease> cervix = [
-  Disease(name: "Cervix Cancer", id: 25, category: "Cervix")
-];
-// Done
-List<Disease> breast = [
-  Disease(name: "Breast Benign", id: 26, category: "Breast"),
-  Disease(name: "Breast Malignant", id: 27, category: "Breast"),
-];
-// Done
-List<Disease> leukemia = [
-  Disease(name: "Acute Lymphocytic Leukemia (ALL)", id: 28, category: "Leukemia")
-];
 
 
 class Home extends StatefulWidget {
@@ -200,16 +140,16 @@ class _HomeState extends State<Home> {
               ),
               InkWell(
                 onTap: () {
-                   if (_isExpanded[id]) {
-                      _controllers[id].collapse();
-                      _isExpanded[id] = false;
-                    }
-                    else {
-                    _controllers[id].expand();
-                    _isExpanded[id] = true;
-                    _scrollToSelectedContent(expansionTileKey: _keys[id]);
+                  if (_isExpanded[id]) {
+                    _controllers[id].collapse();
+                    _isExpanded[id] = false;
+                  }
+                  else {
+                  _controllers[id].expand();
+                  _isExpanded[id] = true;
+                  _scrollToSelectedContent(expansionTileKey: _keys[id]);
 
-                    }
+                  }
 
                 },
                 child: Container(height: 50,) 
@@ -226,19 +166,19 @@ class _HomeState extends State<Home> {
       drawer: Drawer(child: ListView(
         children: <Widget>[
           DrawerHeader(
-            child: Text(
-              'Welcome to SnapHealth, \n${FirebaseAuth.instance.currentUser!.displayName}',
-              style: TextStyle(color: Colors.black54, fontSize: 25),
-            ),
             decoration: BoxDecoration(
                 color: Colors.blue[300],
                 image: DecorationImage(
                     fit: BoxFit.fill,
                     image: AssetImage('assets/cover.jfif'))),
+            child: Text(
+              'Welcome to SnapHealth, \n${FirebaseAuth.instance.currentUser!.displayName}',
+              style: const TextStyle(color: Colors.black54, fontSize: 25),
+            ),
           ),
           ListTile(
-            leading: Icon(Icons.verified_user),
-            title: Text('Profile'),
+            leading: const Icon(Icons.verified_user),
+            title: const Text('Profile', style:TextStyle(fontSize: 20)),
             onTap: () {
               Navigator.pushNamed(context, "/profile");
 
@@ -273,8 +213,8 @@ class _HomeState extends State<Home> {
           //   onTap: () => {Navigator.of(context).pop()},
           // ),
           ListTile(
-            leading: Icon(Icons.exit_to_app),
-            title: Text('Logout'),
+            leading: const Icon(Icons.exit_to_app),
+            title: const Text('Log out', style:TextStyle(fontSize: 20)),
             onTap: () async {
               await FirebaseAuth.instance.signOut();
               ScaffoldMessenger.of(context).showSnackBar(
@@ -297,12 +237,6 @@ class _HomeState extends State<Home> {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [Text("", style: GoogleFonts.lora(fontSize: 28, color:Colors.white)), SizedBox(height:AppBar().preferredSize.height - 10, child: Image.asset('assets/snake.png', fit: BoxFit.contain)),]),
           backgroundColor: Colors.blue[300],
-          // leading: GestureDetector(
-          //   onTap: () { /* Write listener code here */ },
-          //     child: const Icon(
-          //       Icons.menu,  // add custom icons also
-          //     ),
-          // ),
         ),
         body: 
         SingleChildScrollView(

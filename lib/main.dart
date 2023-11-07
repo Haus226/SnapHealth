@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
-import 'homePage.dart';
-import 'loginPage.dart';
+import 'pages/homePage.dart';
+import 'pages/loginPage.dart';
 import 'package:firebase_core/firebase_core.dart';
-import 'profilePage.dart';
+import 'pages/profilePage.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp(
   );
-  runApp(MaterialApp(
+  runApp(MaterialApp(  
     title: '',
     debugShowCheckedModeBanner: false,
     initialRoute: "/login",
