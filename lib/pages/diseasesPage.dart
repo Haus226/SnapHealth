@@ -111,7 +111,7 @@ class _DiseasesPageState extends State<DiseasesPage> {
     // and also the host of the host and the port of the Flask app same as the url
     // Make sure the local host allow the device to connect thrpugh that port
     // Reference : https://stackoverflow.com/questions/51889837/cannot-connect-to-localhost-api-from-android-app?noredirect=1&lq=1
-    URL = "http://192.168.1.19:9000/";
+    // URL = "http://192.168.1.19:9000/";
     var image = await ImagePicker().pickImage(source: ImageSource.gallery);
 
     for (var idx = 0; idx < _models.length; idx++) {
@@ -478,7 +478,6 @@ class _DiseasesPageState extends State<DiseasesPage> {
       diseaseCards(disease_name, 0),
       diseaseCards(disease_name, 1),
       diseaseCards(disease_name, 2),
-      diseaseExImage(disease_name)
     ];
 
     return Scaffold(

@@ -9,7 +9,7 @@
     },
     {
       "name": "archive",
-      "rootUri": "file:///C:/Users/User/AppData/Local/Pub/Cache/hosted/pub.dev/archive-3.4.8",
+      "rootUri": "file:///C:/Users/User/AppData/Local/Pub/Cache/hosted/pub.dev/archive-3.4.9",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
@@ -518,7 +518,7 @@
       "languageVersion": "3.1"
     }
   ],
-  "generated": "2023-11-07T04:59:47.696171Z",
+  "generated": "2023-11-08T09:43:18.841249Z",
   "generator": "pub",
   "generatorVersion": "3.1.5"
 }
