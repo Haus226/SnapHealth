@@ -111,7 +111,7 @@ class _DiseasesPageState extends State<DiseasesPage> {
     // and also the host of the host and the port of the Flask app same as the url
     // Make sure the local host allow the device to connect thrpugh that port
     // Reference : https://stackoverflow.com/questions/51889837/cannot-connect-to-localhost-api-from-android-app?noredirect=1&lq=1
-    // URL = "http://192.168.1.19:9000/";
+    URL = "http://192.168.1.19:9000/";
     var image = await ImagePicker().pickImage(source: ImageSource.gallery);
 
     for (var idx = 0; idx < _models.length; idx++) {
@@ -142,7 +142,7 @@ class _DiseasesPageState extends State<DiseasesPage> {
           )),
           content: Text("The server is not running, please try again later...", style:GoogleFonts.lora(fontSize: 20, color: Colors.black)),
           duration: Duration(seconds: 5),
-          backgroundColor: Colors.amber,
+          backgroundColor: Colors.amber[300]!.withOpacity(0.9),
           ));
       }
 
@@ -183,7 +183,7 @@ class _DiseasesPageState extends State<DiseasesPage> {
                   borderRadius: BorderRadius.only(
                       topLeft: Radius.circular(20),
                       topRight: Radius.circular(20))),
-              backgroundColor: Colors.pink[50],
+              backgroundColor: Colors.pink[50]!.withOpacity(0.9),
               content: Column(children: [
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -250,7 +250,8 @@ class _DiseasesPageState extends State<DiseasesPage> {
           shape: const RoundedRectangleBorder(
               borderRadius: BorderRadius.only(
                   topLeft: Radius.circular(20), topRight: Radius.circular(20))),
-          backgroundColor: Colors.red,
+          backgroundColor: Colors.red[300]!.withOpacity(0.9),
+
         ));
       }
       // prediction = pred;
