@@ -1,43 +1,37 @@
 # SnapHealth
 
-- An Android mobile application that offers medical image analysis for health screening.
-- Integrate Firebase for secure user data storage
-- Utilize Python as a backend language to enable model predictions on a cloud server if deployed.
-- Present users with detailed information on medical conditions, including descriptions, symptoms, and available treatments.
-- Offer a user-friendly interface for easy navigation and accessibility.
+### SnapHealth: A Comprehensive Healthcare Solution
 
-## Usage of Python
-- [`predict.py`](train_and_predict/predict.py) is the Flask app used to interact with flutter app to receive medical image and return the prediction
-- [`train.ipynb`](train_and_predict/train.ipynb) is the python files that contains the code written for training where the dataset is organized such that each class folder in the dataset contains test, train and val folders
+SnapHealth is an innovative healthcare platform that leverages advanced artificial intelligence technologies to provide users with comprehensive medical analysis and advice. Below are the core functions of SnapHealth:
 
-## Diseases supported
-The diseases in the same line use the same models to predict they are just different classes
-- Brain
-  - Alzheimer
-  - Glioma, Meningioma, Pituitary
-- Lung
-  - Lung Adenocarcinoma, Lung Benign Tissue, Lung Squamous Cell Carcinoma
-  - Covid-19, Pneumonia, Tuberculosis
-- Eye
-  - Cataract, Glaucoma, Diabetic Retinopathy
-  - Choroidal Neovascularization, Diabetic Macular Edema, Drusen
-- Oral
-  - Oral Squamous Cell Carcinoma
-- Lymphoma
-  - Chronic Lymphocytic Leukemia, Follicular Lymphoma, Mantle Cell Lymphoma
-- Colon
-  - Colon Adenocarcinoma, Colon Benign Tissue
-- Kidney
-  - Kidney Cyst, Kidney Stone, Kidney Tumor
-- Cervix
-  - Cervix Cancer (5 different classes for tissue)
-- Breast
-  - Breast Benign, Breast Malignant
-- Leukemia
-  - Acute Lymphocytic Leukemia (4 different claases for tissue)
-## CNN Models provided
-- VGG-19
-- InceptionV3
-- Xception
-- DenseNet201
-- Ensemble model of the models above
+## Core Functions
+
+### 1. **Medical Image Analysis**
+
+- **Deep Learning Model for Image Analysis:**
+  - **Objective:** This function uses a deep learning model, typically a Convolutional Neural Network (CNN), to analyze medical images such as X-rays, MRIs, or CT scans.
+  - **Heatmap Overlay:** The model highlights areas of concern within the medical image by overlaying a heatmap. This heatmap indicates the regions that the CNN model identifies as most likely to be associated with medical abnormalities or conditions.
+  - **LLM Explanation and Advice:** Following the image analysis, a Large Language Model (LLM) generates a detailed explanation of the findings. It also provides advice on potential next steps, such as further tests or treatments. This explanation is tailored to be both accurate and easily understandable by the user.
+
+### 2. **LLM Medical Consultant**
+
+- **Retrieval-Augmented Generation (RAG) Technique:**
+  - **Objective:** The LLM Medical Consultant uses the RAG technique to access and retrieve relevant information from a medical database, ensuring that the advice provided is both precise and up-to-date.
+  - **Personalized Medical Advice:** By integrating retrieved data with the LLM's generative capabilities, this function provides personalized medical advice based on the user's queries or the analysis of their medical data. This can include explanations of symptoms, possible diagnoses, treatment options, and preventive measures.
+  
+### 3. **Food Nutrition Detector**
+
+- **Deep Learning Model for Nutrition Prediction:**
+  - **Objective:** This function allows users to analyze images of food to predict the nutritional content. The deep learning model estimates the quantities of macronutrients (e.g., calories, proteins, fats, carbohydrates) and potentially other nutritional components such as vitamins and minerals.
+  
+- **LLM-based Nutrition Analysis:**
+  - **Rephrasing and Elaboration:** After predicting the nutritional content, the LLM provides a detailed analysis of what these nutrients mean for the user's diet. It rephrases the information to make it easily understandable and elaborates on the potential health impacts of consuming the detected nutrients. For example, it might explain how the detected levels of fats or sugars align with dietary recommendations.
+
+---
+
+### Key Features
+- **User-Friendly Interface:** The platform is designed to be accessible to users with varying levels of medical knowledge, ensuring that both patients and healthcare professionals can benefit from its capabilities.
+- **Real-Time Analysis:** SnapHealth offers real-time analysis, making it a valuable tool for quick decision-making in clinical settings or personal health monitoring.
+- **Data Privacy and Security:** Ensuring user data is secure and private is a top priority, adhering to all relevant healthcare regulations and standards.
+
+SnapHealth is poised to revolutionize how medical advice and health monitoring are conducted by combining cutting-edge AI technologies with user-friendly functionalities.
