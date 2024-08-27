@@ -1,9 +1,8 @@
 # SnapHealth
 
+<img src='./Digitalization of Healthcare Services.png'>
+
 ### SnapHealth: A Comprehensive Healthcare Solution
-
-
-!["Digitalization of Healthcare Services.png"]("Digitalization of Healthcare Services.png")
 
 SnapHealth is an innovative healthcare platform that leverages advanced artificial intelligence technologies to provide users with comprehensive medical analysis and advice. Below are the core functions of SnapHealth:
 
@@ -38,3 +37,4 @@ SnapHealth is an innovative healthcare platform that leverages advanced artifici
 - **Data Privacy and Security:** Ensuring user data is secure and private is a top priority, adhering to all relevant healthcare regulations and standards.
 
 SnapHealth is poised to revolutionize how medical advice and health monitoring are conducted by combining cutting-edge AI technologies with user-friendly functionalities.
+
